@@ -49,6 +49,20 @@ namespace EasyBibClone
         public MainWindow()
         {
             InitializeComponent();
+            ComboWombo.Width = 269;
+            ComboWombo.Height = 25;
+
+
+            ComboWombo.IsEditable = true;
+            ComboWombo.IsReadOnly = true;
+            ComboWombo.Text = "Select A Format";
+
+            ComboWombo.Items.Add("MLA8");
+            
+            ComboWombo.Items.Add("APA");
+            MainGrid.Children.Add(ComboWombo);
+            Canvas.SetTop(ComboWombo, 213);
+            Canvas.SetLeft(ComboWombo, 123);
 
             sourceType = "BOOK";
             if(sourceType == "BOOK")
@@ -220,6 +234,16 @@ namespace EasyBibClone
                 temp = temp.Remove(temp.Length - 1);
             }
             return temp;
+            
+        private void CreateCit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+           
+        }
         }
     }
 }
