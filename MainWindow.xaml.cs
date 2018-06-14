@@ -48,6 +48,10 @@ namespace EasyBibClone
 
         public MainWindow()
         {
+        
+        public ComboBox ComboWombo = new ComboBox();
+        public TextBlock Combo_txt = new TextBlock();
+        
             InitializeComponent();
             ComboWombo.Width = 269;
             ComboWombo.Height = 25;
